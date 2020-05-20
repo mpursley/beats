@@ -24,14 +24,14 @@ image::./images/metricbeat-oracle-overview.png[]
 [float]
 
 == Requirements
-Oracle database requires a special OCI connector to get connected to the database. You can find more information about it in the https://www.oracle.com/database/technologies/instant-client.html[official link of Oracle's webpage]. Oracle's webpage contains a comprehensive manual about installation methods and troubleshooting. A small description is included here but follow Oracle's official documentation if you find some issue. The OCI Instant Client is available with the Oracle Universal Installer, RPM file or ZIP file. Download links can be found https://www.oracle.com/database/technologies/instant-client/downloads.html[here]. The Oracle Technology Network License Agreement with Oracle must be accepted to download the library.
+Oracle database requires a special OCI connector to connect to the database. You can find more information about it in the https://www.oracle.com/database/technologies/instant-client.html[official link of Oracle's webpage]. Oracle's webpage contains a comprehensive manual about installation methods and troubleshooting. A small description is included here, but follow Oracle's official documentation if you find some issue. The OCI Instant Client is available with the Oracle Universal Installer, RPM file or ZIP file. Download links can be found at https://www.oracle.com/database/technologies/instant-client/downloads.html[here]. The Oracle Technology Network License Agreement with Oracle must be accepted to download the library.
 
-The OCI library install few Client Shared Libraries that must be referenced on the machine where Metricbeat is installed. The environment variable `LD_LIBRARY_PATH` is used to set the reference required by the Metricbeat library. For example, let's say you have downloaded the library into your `Downloads` folder, you can follow the steps below to install the ZIP library on `/usr/lib` (assuming you have `wget` and a zip unpacker):
+The OCI library installs few Client Shared Libraries that must be referenced on the machine where Metricbeat is installed. The environment variable `LD_LIBRARY_PATH` is used to set the reference required by the Metricbeat library. For example, let's say you have downloaded the library into your `Downloads` folder, you can follow the steps below to install the ZIP library on `/usr/lib` (assuming you have `wget` and a zip unpacker):
 
 	unzip $HOME/Downloads/instantclient-basic-linux.x64-18.5.0.0.0dbru.zip -d /usr/lib
 	export LD_LIBRARY_PATH=/usr/lib/instantclient_18_5:$LD_LIBRARY_PATH`
 
-Then, Metricbeat can be launched normally if the environment variable is set.
+Then, Metricbeat can be launched normally, if the environment variable is set.
 
 [float]
 == Metricsets
