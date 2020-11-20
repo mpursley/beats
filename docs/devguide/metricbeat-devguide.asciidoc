@@ -12,7 +12,7 @@ We recommend that you start by creating your own Beat to keep the development of
 independent of Metricbeat. At a later stage, if you decide to add a module to Metricbeat, you can reuse
 the code without making additional changes.
 
-This following topics describe how to contribute to Metricbeat by adding metricsets, modules, and new Beats based on Metricbeat:
+The following topics describe how to contribute to Metricbeat by adding metricsets, modules, and new Beats based on Metricbeat:
 
 * <<metricbeat-dev-overview>>
 * <<creating-metricsets>>
